@@ -29,9 +29,6 @@
 		86D2CDFF29C2025700290AC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D2CDFC29C2025700290AC1 /* AppDelegate.swift */; };
 		86D2CE0129C21C9400290AC1 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D2CE0029C21C9400290AC1 /* SettingView.swift */; };
 		86D2CE0229C21C9400290AC1 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D2CE0029C21C9400290AC1 /* SettingView.swift */; };
-		86D2CE0729C23F6900290AC1 /* PieChartReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D2CE0629C23F6900290AC1 /* PieChartReport.swift */; };
-		86D2CE0829C23F6900290AC1 /* PieChartReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D2CE0629C23F6900290AC1 /* PieChartReport.swift */; };
-		86D2CE0929C23F6900290AC1 /* PieChartReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D2CE0629C23F6900290AC1 /* PieChartReport.swift */; };
 		86D2CE2029C24EE700290AC1 /* ManagedSettings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86D2CE1F29C24EE700290AC1 /* ManagedSettings.framework */; };
 		86D2CE2229C24EE700290AC1 /* ManagedSettingsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86D2CE2129C24EE700290AC1 /* ManagedSettingsUI.framework */; };
 		86D2CE2529C24EE700290AC1 /* ShieldConfigurationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D2CE2429C24EE700290AC1 /* ShieldConfigurationExtension.swift */; };
@@ -107,7 +104,6 @@
 		86D2CDF729C1FF4C00290AC1 /* ActivityMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityMonitor.swift; sourceTree = "<group>"; };
 		86D2CDFC29C2025700290AC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86D2CE0029C21C9400290AC1 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
-		86D2CE0629C23F6900290AC1 /* PieChartReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartReport.swift; sourceTree = "<group>"; };
 		86D2CE1E29C24EE700290AC1 /* GloriousCustomShield.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = GloriousCustomShield.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		86D2CE1F29C24EE700290AC1 /* ManagedSettings.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ManagedSettings.framework; path = System/Library/Frameworks/ManagedSettings.framework; sourceTree = SDKROOT; };
 		86D2CE2129C24EE700290AC1 /* ManagedSettingsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ManagedSettingsUI.framework; path = Library/Frameworks/ManagedSettingsUI.framework; sourceTree = DEVELOPER_DIR; };
@@ -192,7 +188,6 @@
 				86D2CDE029C1F99A00290AC1 /* Model.swift */,
 				86D2CDFC29C2025700290AC1 /* AppDelegate.swift */,
 				86D2CDB529C1631C00290AC1 /* ContentView.swift */,
-				86D2CE0629C23F6900290AC1 /* PieChartReport.swift */,
 				86D2CE0029C21C9400290AC1 /* SettingView.swift */,
 				86D2CDB729C1631D00290AC1 /* Assets.xcassets */,
 				86D2CDB929C1631D00290AC1 /* Glorious_Surfer.entitlements */,
@@ -451,7 +446,6 @@
 				86D2CDFD29C2025700290AC1 /* AppDelegate.swift in Sources */,
 				86D2CDF829C1FF4C00290AC1 /* ActivityMonitor.swift in Sources */,
 				86D2CDB629C1631C00290AC1 /* ContentView.swift in Sources */,
-				86D2CE0729C23F6900290AC1 /* PieChartReport.swift in Sources */,
 				86D2CE0129C21C9400290AC1 /* SettingView.swift in Sources */,
 				86D2CDB429C1631C00290AC1 /* Glorious_SurferApp.swift in Sources */,
 				86D2CDDF29C1F78D00290AC1 /* SetUp.swift in Sources */,
@@ -477,7 +471,6 @@
 				86D2CE0229C21C9400290AC1 /* SettingView.swift in Sources */,
 				86D2CDD029C1631D00290AC1 /* Glorious_SurferUITests.swift in Sources */,
 				86D2CDD229C1631D00290AC1 /* Glorious_SurferUITestsLaunchTests.swift in Sources */,
-				86D2CE0829C23F6900290AC1 /* PieChartReport.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,7 +479,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				86D2CDFF29C2025700290AC1 /* AppDelegate.swift in Sources */,
-				86D2CE0929C23F6900290AC1 /* PieChartReport.swift in Sources */,
 				86D2CDFB29C200E200290AC1 /* Model.swift in Sources */,
 				86D2CDED29C1FF3000290AC1 /* DeviceActivityMonitorExtension.swift in Sources */,
 				86D2CDFA29C1FF4C00290AC1 /* ActivityMonitor.swift in Sources */,

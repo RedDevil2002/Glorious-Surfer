@@ -4,20 +4,33 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>AcitivityMonitor.xcscheme_^#shared#^_</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
-		</dict>
 		<key>Glorious Surfer.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
-		<key>GloriousCustomShield.xcscheme_^#shared#^_</key>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>86D2CDAF29C1631C00290AC1</key>
 		<dict>
-			<key>orderHint</key>
-			<integer>2</integer>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>86D2CDC029C1631D00290AC1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>86D2CDE629C1FF3000290AC1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>86D2CE1D29C24EE700290AC1</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
