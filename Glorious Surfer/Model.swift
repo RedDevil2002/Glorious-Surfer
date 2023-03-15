@@ -9,6 +9,8 @@ import Foundation
 import FamilyControls
 import DeviceActivity
 import ManagedSettings
+import ManagedSettingsUI
+import UIKit
 
 class Model: ObservableObject {
     let store = ManagedSettingsStore()
@@ -16,11 +18,11 @@ class Model: ObservableObject {
     @Published var selectionToDiscourage: FamilyActivitySelection
     @Published var selectionToEncourage: FamilyActivitySelection
     
-    private init() {
+    init() {
         selectionToEncourage = FamilyActivitySelection()
         selectionToDiscourage = FamilyActivitySelection()
     }
-    
+        
     static let shared: Model = Model()
     
     func setShieldRestrictions() {
@@ -50,6 +52,7 @@ class Model: ObservableObject {
         store.media.denyExplicitContent = true
         store.gameCenter.denyMultiplayerGaming = true
         store.media.denyMusicService = false
+        
     }
 }
 

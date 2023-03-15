@@ -29,8 +29,14 @@
 		86D2CDFF29C2025700290AC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D2CDFC29C2025700290AC1 /* AppDelegate.swift */; };
 		86D2CE0129C21C9400290AC1 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D2CE0029C21C9400290AC1 /* SettingView.swift */; };
 		86D2CE0229C21C9400290AC1 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D2CE0029C21C9400290AC1 /* SettingView.swift */; };
-		86D2CE0429C21ECE00290AC1 /* safeSurferIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 86D2CE0329C21ECE00290AC1 /* safeSurferIcon.png */; };
-		86D2CE0529C21ECE00290AC1 /* safeSurferIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 86D2CE0329C21ECE00290AC1 /* safeSurferIcon.png */; };
+		86D2CE0729C23F6900290AC1 /* PieChartReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D2CE0629C23F6900290AC1 /* PieChartReport.swift */; };
+		86D2CE0829C23F6900290AC1 /* PieChartReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D2CE0629C23F6900290AC1 /* PieChartReport.swift */; };
+		86D2CE0929C23F6900290AC1 /* PieChartReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D2CE0629C23F6900290AC1 /* PieChartReport.swift */; };
+		86D2CE2029C24EE700290AC1 /* ManagedSettings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86D2CE1F29C24EE700290AC1 /* ManagedSettings.framework */; };
+		86D2CE2229C24EE700290AC1 /* ManagedSettingsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86D2CE2129C24EE700290AC1 /* ManagedSettingsUI.framework */; };
+		86D2CE2529C24EE700290AC1 /* ShieldConfigurationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D2CE2429C24EE700290AC1 /* ShieldConfigurationExtension.swift */; };
+		86D2CE2A29C24EE700290AC1 /* GloriousCustomShield.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 86D2CE1E29C24EE700290AC1 /* GloriousCustomShield.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		86D2CE2F29C24F7700290AC1 /* ShieldAsset.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86D2CE2E29C24F7700290AC1 /* ShieldAsset.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +61,13 @@
 			remoteGlobalIDString = 86D2CDE629C1FF3000290AC1;
 			remoteInfo = AcitivityMonitor;
 		};
+		86D2CE2829C24EE700290AC1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 86D2CDA829C1631C00290AC1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 86D2CE1D29C24EE700290AC1;
+			remoteInfo = GloriousCustomShield;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -64,6 +77,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				86D2CE2A29C24EE700290AC1 /* GloriousCustomShield.appex in Embed Foundation Extensions */,
 				86D2CDF229C1FF3000290AC1 /* AcitivityMonitor.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
@@ -93,7 +107,14 @@
 		86D2CDF729C1FF4C00290AC1 /* ActivityMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityMonitor.swift; sourceTree = "<group>"; };
 		86D2CDFC29C2025700290AC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86D2CE0029C21C9400290AC1 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
-		86D2CE0329C21ECE00290AC1 /* safeSurferIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = safeSurferIcon.png; path = ../../../Downloads/safeSurferIcon.png; sourceTree = "<group>"; };
+		86D2CE0629C23F6900290AC1 /* PieChartReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartReport.swift; sourceTree = "<group>"; };
+		86D2CE1E29C24EE700290AC1 /* GloriousCustomShield.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = GloriousCustomShield.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		86D2CE1F29C24EE700290AC1 /* ManagedSettings.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ManagedSettings.framework; path = System/Library/Frameworks/ManagedSettings.framework; sourceTree = SDKROOT; };
+		86D2CE2129C24EE700290AC1 /* ManagedSettingsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ManagedSettingsUI.framework; path = Library/Frameworks/ManagedSettingsUI.framework; sourceTree = DEVELOPER_DIR; };
+		86D2CE2429C24EE700290AC1 /* ShieldConfigurationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShieldConfigurationExtension.swift; sourceTree = "<group>"; };
+		86D2CE2629C24EE700290AC1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		86D2CE2729C24EE700290AC1 /* GloriousCustomShield.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = GloriousCustomShield.entitlements; sourceTree = "<group>"; };
+		86D2CE2E29C24F7700290AC1 /* ShieldAsset.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = ShieldAsset.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +147,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		86D2CE1B29C24EE700290AC1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86D2CE2029C24EE700290AC1 /* ManagedSettings.framework in Frameworks */,
+				86D2CE2229C24EE700290AC1 /* ManagedSettingsUI.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -136,6 +166,7 @@
 				86D2CDC429C1631D00290AC1 /* Glorious SurferTests */,
 				86D2CDCE29C1631D00290AC1 /* Glorious SurferUITests */,
 				86D2CDEB29C1FF3000290AC1 /* AcitivityMonitor */,
+				86D2CE2329C24EE700290AC1 /* GloriousCustomShield */,
 				86D2CDE829C1FF3000290AC1 /* Frameworks */,
 				86D2CDB129C1631C00290AC1 /* Products */,
 			);
@@ -148,6 +179,7 @@
 				86D2CDC129C1631D00290AC1 /* Glorious SurferTests.xctest */,
 				86D2CDCB29C1631D00290AC1 /* Glorious SurferUITests.xctest */,
 				86D2CDE729C1FF3000290AC1 /* AcitivityMonitor.appex */,
+				86D2CE1E29C24EE700290AC1 /* GloriousCustomShield.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -160,9 +192,9 @@
 				86D2CDE029C1F99A00290AC1 /* Model.swift */,
 				86D2CDFC29C2025700290AC1 /* AppDelegate.swift */,
 				86D2CDB529C1631C00290AC1 /* ContentView.swift */,
+				86D2CE0629C23F6900290AC1 /* PieChartReport.swift */,
 				86D2CE0029C21C9400290AC1 /* SettingView.swift */,
 				86D2CDB729C1631D00290AC1 /* Assets.xcassets */,
-				86D2CE0329C21ECE00290AC1 /* safeSurferIcon.png */,
 				86D2CDB929C1631D00290AC1 /* Glorious_Surfer.entitlements */,
 				86D2CDBA29C1631D00290AC1 /* Preview Content */,
 			);
@@ -198,6 +230,8 @@
 			isa = PBXGroup;
 			children = (
 				86D2CDE929C1FF3000290AC1 /* DeviceActivity.framework */,
+				86D2CE1F29C24EE700290AC1 /* ManagedSettings.framework */,
+				86D2CE2129C24EE700290AC1 /* ManagedSettingsUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -211,6 +245,17 @@
 				86D2CDEF29C1FF3000290AC1 /* AcitivityMonitor.entitlements */,
 			);
 			path = AcitivityMonitor;
+			sourceTree = "<group>";
+		};
+		86D2CE2329C24EE700290AC1 /* GloriousCustomShield */ = {
+			isa = PBXGroup;
+			children = (
+				86D2CE2429C24EE700290AC1 /* ShieldConfigurationExtension.swift */,
+				86D2CE2E29C24F7700290AC1 /* ShieldAsset.xcassets */,
+				86D2CE2629C24EE700290AC1 /* Info.plist */,
+				86D2CE2729C24EE700290AC1 /* GloriousCustomShield.entitlements */,
+			);
+			path = GloriousCustomShield;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +274,7 @@
 			);
 			dependencies = (
 				86D2CDF129C1FF3000290AC1 /* PBXTargetDependency */,
+				86D2CE2929C24EE700290AC1 /* PBXTargetDependency */,
 			);
 			name = "Glorious Surfer";
 			productName = "Glorious Surfer";
@@ -288,6 +334,23 @@
 			productReference = 86D2CDE729C1FF3000290AC1 /* AcitivityMonitor.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		86D2CE1D29C24EE700290AC1 /* GloriousCustomShield */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 86D2CE2B29C24EE700290AC1 /* Build configuration list for PBXNativeTarget "GloriousCustomShield" */;
+			buildPhases = (
+				86D2CE1A29C24EE700290AC1 /* Sources */,
+				86D2CE1B29C24EE700290AC1 /* Frameworks */,
+				86D2CE1C29C24EE700290AC1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GloriousCustomShield;
+			productName = GloriousCustomShield;
+			productReference = 86D2CE1E29C24EE700290AC1 /* GloriousCustomShield.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -312,6 +375,9 @@
 					86D2CDE629C1FF3000290AC1 = {
 						CreatedOnToolsVersion = 14.2;
 					};
+					86D2CE1D29C24EE700290AC1 = {
+						CreatedOnToolsVersion = 14.2;
+					};
 				};
 			};
 			buildConfigurationList = 86D2CDAB29C1631C00290AC1 /* Build configuration list for PBXProject "Glorious Surfer" */;
@@ -331,6 +397,7 @@
 				86D2CDC029C1631D00290AC1 /* Glorious SurferTests */,
 				86D2CDCA29C1631D00290AC1 /* Glorious SurferUITests */,
 				86D2CDE629C1FF3000290AC1 /* AcitivityMonitor */,
+				86D2CE1D29C24EE700290AC1 /* GloriousCustomShield */,
 			);
 		};
 /* End PBXProject section */
@@ -341,7 +408,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				86D2CDBC29C1631D00290AC1 /* Preview Assets.xcassets in Resources */,
-				86D2CE0429C21ECE00290AC1 /* safeSurferIcon.png in Resources */,
 				86D2CDB829C1631D00290AC1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -357,7 +423,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86D2CE0529C21ECE00290AC1 /* safeSurferIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,6 +430,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86D2CE1C29C24EE700290AC1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86D2CE2F29C24F7700290AC1 /* ShieldAsset.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,6 +451,7 @@
 				86D2CDFD29C2025700290AC1 /* AppDelegate.swift in Sources */,
 				86D2CDF829C1FF4C00290AC1 /* ActivityMonitor.swift in Sources */,
 				86D2CDB629C1631C00290AC1 /* ContentView.swift in Sources */,
+				86D2CE0729C23F6900290AC1 /* PieChartReport.swift in Sources */,
 				86D2CE0129C21C9400290AC1 /* SettingView.swift in Sources */,
 				86D2CDB429C1631C00290AC1 /* Glorious_SurferApp.swift in Sources */,
 				86D2CDDF29C1F78D00290AC1 /* SetUp.swift in Sources */,
@@ -403,6 +477,7 @@
 				86D2CE0229C21C9400290AC1 /* SettingView.swift in Sources */,
 				86D2CDD029C1631D00290AC1 /* Glorious_SurferUITests.swift in Sources */,
 				86D2CDD229C1631D00290AC1 /* Glorious_SurferUITestsLaunchTests.swift in Sources */,
+				86D2CE0829C23F6900290AC1 /* PieChartReport.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,9 +486,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				86D2CDFF29C2025700290AC1 /* AppDelegate.swift in Sources */,
+				86D2CE0929C23F6900290AC1 /* PieChartReport.swift in Sources */,
 				86D2CDFB29C200E200290AC1 /* Model.swift in Sources */,
 				86D2CDED29C1FF3000290AC1 /* DeviceActivityMonitorExtension.swift in Sources */,
 				86D2CDFA29C1FF4C00290AC1 /* ActivityMonitor.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86D2CE1A29C24EE700290AC1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86D2CE2529C24EE700290AC1 /* ShieldConfigurationExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -434,6 +518,11 @@
 			isa = PBXTargetDependency;
 			target = 86D2CDE629C1FF3000290AC1 /* AcitivityMonitor */;
 			targetProxy = 86D2CDF029C1FF3000290AC1 /* PBXContainerItemProxy */;
+		};
+		86D2CE2929C24EE700290AC1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 86D2CE1D29C24EE700290AC1 /* GloriousCustomShield */;
+			targetProxy = 86D2CE2829C24EE700290AC1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -772,6 +861,63 @@
 			};
 			name = Release;
 		};
+		86D2CE2C29C24EE700290AC1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = GloriousCustomShield/GloriousCustomShield.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = F6K6BFNLSM;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GloriousCustomShield/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = GloriousCustomShield;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.safeSurfer.devil.Glorious-Surfer.GloriousCustomShield";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		86D2CE2D29C24EE700290AC1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = GloriousCustomShield/GloriousCustomShield.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = F6K6BFNLSM;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = GloriousCustomShield/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = GloriousCustomShield;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.safeSurfer.devil.Glorious-Surfer.GloriousCustomShield";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -816,6 +962,15 @@
 			buildConfigurations = (
 				86D2CDF429C1FF3000290AC1 /* Debug */,
 				86D2CDF529C1FF3000290AC1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		86D2CE2B29C24EE700290AC1 /* Build configuration list for PBXNativeTarget "GloriousCustomShield" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86D2CE2C29C24EE700290AC1 /* Debug */,
+				86D2CE2D29C24EE700290AC1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
