@@ -16,24 +16,45 @@ struct ContentView: View {
     
     var body: some View {
         TabView {
-            Button("Select Apps to Discourage") {
+            Button(action: {
                 showDiscouragedAppsPicker = true
-            }
+            }, label: {
+                VStack {
+                    Image(systemName: "xmark.shield.fill")
+                        .resizable()
+                        .scaledToFit()
+                        .foregroundColor(.red)
+                    
+                    Text("Select Apps to Discourage")
+                        .font(.title2)
+                        .foregroundColor(.primary)
+                        .scaledToFill()
+                }
+                .padding()
+                .frame(width: 270.0, height: 130.0)
+                .background(.orange)
+                .cornerRadius(15.0)
+                .toolbarColorScheme(.light, for: .tabBar)
+                
+                
+                
+            })
             .familyActivityPicker(isPresented: $showDiscouragedAppsPicker, selection: $model.selectionToDiscourage)
             .onChange(of: model.selectionToDiscourage) { newValue in
                 model.setShieldRestrictions()
             }
-            .tabItem {
-                Label("Set Not Allowed Apps", systemImage: "xmark.square.fill")
-                    .font(.title3)
-                    .foregroundColor(.red)
-            }
+                .tabItem {
+                    Label("Set Not Allowed Apps", systemImage: "xmark.shield.fill")
+                        .font(.title3)
+                }
+                .foregroundColor(.red)
             
             SettingView()
                 .tabItem {
                     Label("Setting", systemImage: "gear.circle.fill")
                 }
         }
+        .accentColor(.red)
     }
 }
 
