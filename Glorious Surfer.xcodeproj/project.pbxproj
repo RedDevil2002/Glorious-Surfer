@@ -29,8 +29,6 @@
 		86D2CDFF29C2025700290AC1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D2CDFC29C2025700290AC1 /* AppDelegate.swift */; };
 		86D2CE0129C21C9400290AC1 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D2CE0029C21C9400290AC1 /* SettingView.swift */; };
 		86D2CE0229C21C9400290AC1 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D2CE0029C21C9400290AC1 /* SettingView.swift */; };
-		86D2CE0429C21ECE00290AC1 /* safeSurferIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 86D2CE0329C21ECE00290AC1 /* safeSurferIcon.png */; };
-		86D2CE0529C21ECE00290AC1 /* safeSurferIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 86D2CE0329C21ECE00290AC1 /* safeSurferIcon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,7 +91,6 @@
 		86D2CDF729C1FF4C00290AC1 /* ActivityMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityMonitor.swift; sourceTree = "<group>"; };
 		86D2CDFC29C2025700290AC1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		86D2CE0029C21C9400290AC1 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
-		86D2CE0329C21ECE00290AC1 /* safeSurferIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = safeSurferIcon.png; path = ../../../Downloads/safeSurferIcon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,7 +159,6 @@
 				86D2CDB529C1631C00290AC1 /* ContentView.swift */,
 				86D2CE0029C21C9400290AC1 /* SettingView.swift */,
 				86D2CDB729C1631D00290AC1 /* Assets.xcassets */,
-				86D2CE0329C21ECE00290AC1 /* safeSurferIcon.png */,
 				86D2CDB929C1631D00290AC1 /* Glorious_Surfer.entitlements */,
 				86D2CDBA29C1631D00290AC1 /* Preview Content */,
 			);
@@ -341,7 +337,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				86D2CDBC29C1631D00290AC1 /* Preview Assets.xcassets in Resources */,
-				86D2CE0429C21ECE00290AC1 /* safeSurferIcon.png in Resources */,
 				86D2CDB829C1631D00290AC1 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -357,7 +352,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86D2CE0529C21ECE00290AC1 /* safeSurferIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
