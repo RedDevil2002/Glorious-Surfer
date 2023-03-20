@@ -17,10 +17,13 @@ class ActivityMonitor: DeviceActivityMonitor {
     
     override func intervalDidStart(for activity: DeviceActivityName) {
         super.intervalDidStart(for: activity)
-        
         let applications = model.selectionToDiscourage.applicationTokens
         model.store.shield.applications = applications
-        
+        for customURL in model.customURLstoBLock {
+            if let token = WebDomain(domain: customURL).token {
+                model.store.shield.webDomains?.insert(token)
+            }
+        }
         model.store.dateAndTime.requireAutomaticDateAndTime = true
     }
     

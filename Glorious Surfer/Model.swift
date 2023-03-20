@@ -9,14 +9,13 @@ import Foundation
 import FamilyControls
 import DeviceActivity
 import ManagedSettings
-import ManagedSettingsUI
-import UIKit
 
 class Model: ObservableObject {
     let store = ManagedSettingsStore()
     
     @Published var selectionToDiscourage: FamilyActivitySelection
     @Published var selectionToEncourage: FamilyActivitySelection
+    @Published var customURLstoBLock: [String] = []
     
     init() {
         selectionToEncourage = FamilyActivitySelection()
@@ -25,12 +24,22 @@ class Model: ObservableObject {
         
     static let shared: Model = Model()
     
+    func blockCustomURLs() {
+        setShieldRestrictions()
+        for customURL in customURLstoBLock {
+            if let token = WebDomain(domain: customURL).token {
+                store.shield.webDomains?.insert(token)
+            }
+        }
+    }
+    
     func setShieldRestrictions() {
         let applications = selectionToDiscourage
         
         store.shield.applications = applications.applicationTokens
         store.shield.applicationCategories = applications.categoryTokens.isEmpty ? nil: ShieldSettings.ActivityCategoryPolicy.specific(applications.categoryTokens)
-        
+        store.shield.webDomainCategories = ShieldSettings.ActivityCategoryPolicy.specific(applications.categoryTokens, except: Set())
+        store.shield.webDomains = applications.webDomainTokens
     }
     
     func initiateMonitoring() {
