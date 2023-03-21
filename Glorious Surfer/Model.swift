@@ -15,22 +15,24 @@ class Model: ObservableObject {
     
     @Published var selectionToDiscourage: FamilyActivitySelection
     @Published var selectionToEncourage: FamilyActivitySelection
-    @Published var customURLstoBLock: [String] = []
+    @Published var customURLstoBLock: [String] = ["twitter.com", "google.com", "facebook.com"]
     
     init() {
         selectionToEncourage = FamilyActivitySelection()
         selectionToDiscourage = FamilyActivitySelection()
+        
+        store.clearAllSettings()
+        print(store.webContent.blockedByFilter)
     }
         
     static let shared: Model = Model()
     
-    func blockCustomURLs() {
-        setShieldRestrictions()
-        for customURL in customURLstoBLock {
-            if let token = WebDomain(domain: customURL).token {
-                store.shield.webDomains?.insert(token)
-            }
-        }
+    func unblock() {
+        store.webContent.blockedByFilter = nil
+    }
+    
+    func adultFilterOn() {
+        store.webContent.blockedByFilter = .auto()
     }
     
     func setShieldRestrictions() {
@@ -40,6 +42,12 @@ class Model: ObservableObject {
         store.shield.applicationCategories = applications.categoryTokens.isEmpty ? nil: ShieldSettings.ActivityCategoryPolicy.specific(applications.categoryTokens)
         store.shield.webDomainCategories = ShieldSettings.ActivityCategoryPolicy.specific(applications.categoryTokens, except: Set())
         store.shield.webDomains = applications.webDomainTokens
+        
+        for customURL in customURLstoBLock {
+            if let token = WebDomain(domain: customURL).token {
+                store.shield.webDomains?.insert(token)
+            }
+        }
     }
     
     func initiateMonitoring() {
@@ -62,6 +70,10 @@ class Model: ObservableObject {
         store.gameCenter.denyMultiplayerGaming = true
         store.media.denyMusicService = false
         
+    }
+    
+    func addToBlockList(url: String) {
+        customURLstoBLock.append(url)
     }
 }
 

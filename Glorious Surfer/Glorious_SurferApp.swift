@@ -17,7 +17,7 @@ struct Glorious_SurferApp: App {
     
     var body: some Scene {
         WindowGroup {
-            CustomBlockListView()
+            ContentView()
                 .environmentObject(model)
                 .onAppear {
                     Task {

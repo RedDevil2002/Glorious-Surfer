@@ -71,6 +71,10 @@ struct ContentView: View {
                     .font(.title3)
             }
             
+            CustomBlockListView(model: _model)
+                .tabItem {
+                    Label("Custom", systemImage: "c.circle.fill")
+                }
             
             SettingView()
                 .tabItem {

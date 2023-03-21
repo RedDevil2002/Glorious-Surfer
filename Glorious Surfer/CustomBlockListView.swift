@@ -10,42 +10,48 @@ import SwiftUI
 struct CustomBlockListView: View {
 //    var viewModel: CustomBLockListViewModel = CustomBLockListViewModel()
     
-    @State var mockURLs: [String] = ["https://www.google.com"]
     @EnvironmentObject var model: Model
+    @State private var showAddCustomURLView = false
     
     var body: some View {
         NavigationView {
             List {
-                ForEach(mockURLs, id: \.self) { mockURL in
+                ForEach(model.customURLstoBLock, id: \.self) { mockURL in
                     Text(mockURL)
                 }
                 .onDelete(perform: delete)
-                .onMove { mockURLs.move(fromOffsets: $0, toOffset: $1) }
+                .onMove { model.customURLstoBLock.move(fromOffsets: $0, toOffset: $1) }
             }
             .toolbar {
                 Button {
-                    mockURLs.append("google\(mockURLs.count).com")
+                    showAddCustomURLView = true
                 } label: {
                     Image(systemName: "plus.circle.fill")
                 }
                 
                 Button {
-                    model.customURLstoBLock = mockURLs
-                    model.blockCustomURLs()
+                    model.setShieldRestrictions()
                 } label: {
                     Text("Block!")
                         .foregroundColor(.red)
                 }
                 
+                Button {
+                    model.unblock()
+                } label: {
+                    Text("UnBlock!")
+                        .foregroundColor(.red)
+                }
                 EditButton()
-                
-                
             }
+        }
+        .sheet(isPresented: $showAddCustomURLView) {
+            AddCustomURLView(model: _model)
         }
     }
     
     func delete(at offsets: IndexSet) {
-        mockURLs.remove(atOffsets: offsets)
+        model.customURLstoBLock.remove(atOffsets: offsets)
     }
 }
 
