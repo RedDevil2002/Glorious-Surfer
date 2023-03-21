@@ -16,11 +16,10 @@ struct CustomBlockListView: View {
     var body: some View {
         NavigationView {
             List {
-                ForEach(model.customURLstoBLock, id: \.self) { mockURL in
-                    Text(mockURL)
+                ForEach(model.customDomainsToBlock, id: \.self) { customDomain in
+                    Text(customDomain.domain ?? "")
                 }
                 .onDelete(perform: delete)
-                .onMove { model.customURLstoBLock.move(fromOffsets: $0, toOffset: $1) }
             }
             .toolbar {
                 Button {
@@ -51,7 +50,7 @@ struct CustomBlockListView: View {
     }
     
     func delete(at offsets: IndexSet) {
-        model.customURLstoBLock.remove(atOffsets: offsets)
+        model.customDomainsToBlock.remove(atOffsets: offsets)
     }
 }
 

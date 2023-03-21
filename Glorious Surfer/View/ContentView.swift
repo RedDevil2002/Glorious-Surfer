@@ -12,7 +12,11 @@ struct ContentView: View {
     @State private var showDiscouragedAppsPicker = false
     @State private var showEncouragedAppsPicker = false
     
-    @State private var isAdultFilterOn = false
+    @State private var isAdultFilterOn = false {
+        didSet {
+            model.adultFilterToggled()
+        }
+    }
     @State private var isDatingFilterOn = false
     @State private var isDrugFilterOn = false
     
@@ -20,6 +24,11 @@ struct ContentView: View {
     
     var body: some View {
         TabView {
+            CustomBlockListView(model: _model)
+                .tabItem {
+                    Label("Custom", systemImage: "")
+                }
+            
             VStack(spacing: 35.0) {
                 Button(action: {
                     showDiscouragedAppsPicker = true
@@ -71,10 +80,7 @@ struct ContentView: View {
                     .font(.title3)
             }
             
-            CustomBlockListView(model: _model)
-                .tabItem {
-                    Label("Custom", systemImage: "c.circle.fill")
-                }
+            
             
             SettingView()
                 .tabItem {

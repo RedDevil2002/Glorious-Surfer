@@ -15,39 +15,54 @@ class Model: ObservableObject {
     
     @Published var selectionToDiscourage: FamilyActivitySelection
     @Published var selectionToEncourage: FamilyActivitySelection
-    @Published var customURLstoBLock: [String] = ["twitter.com", "google.com", "facebook.com"]
+    
+    // Change this line later! (should have no default custom list.)
+    @Published var customDomainsToBlock: [WebDomain] = ["mobile.twitter.com", "twitter.com", "google.com", "netflix.com", "naver.com", "reddit.com"].compactMap { domain in
+        WebDomain(domain: domain)
+    } {
+        didSet {
+            print(customDomainsToBlock)
+        }
+    }
     
     init() {
         selectionToEncourage = FamilyActivitySelection()
         selectionToDiscourage = FamilyActivitySelection()
-        
-        store.clearAllSettings()
-        print(store.webContent.blockedByFilter)
     }
         
     static let shared: Model = Model()
     
     func unblock() {
-        store.webContent.blockedByFilter = nil
+        store.webContent.blockedByFilter = WebContentSettings.FilterPolicy.none
     }
     
-    func adultFilterOn() {
-        store.webContent.blockedByFilter = .auto()
+    func adultFilterToggled() {
+        if store.webContent.blockedByFilter == .auto() {
+            store.webContent.blockedByFilter = WebContentSettings.FilterPolicy.none
+        } else {
+            store.webContent.blockedByFilter = .auto()
+        }
     }
     
     func setShieldRestrictions() {
-        let applications = selectionToDiscourage
+        // SET UP DOMAINS
+        let domainsToBLocks = Set(selectionToDiscourage.webDomains).union(customDomainsToBlock)
+        print("model.setShieledRestrictions()\ncustomDomainsToBlock = \(customDomainsToBlock)")
+        print("model.setShieledRestrictions()\ndomainsToBlock = \(domainsToBLocks)")
         
-        store.shield.applications = applications.applicationTokens
-        store.shield.applicationCategories = applications.categoryTokens.isEmpty ? nil: ShieldSettings.ActivityCategoryPolicy.specific(applications.categoryTokens)
-        store.shield.webDomainCategories = ShieldSettings.ActivityCategoryPolicy.specific(applications.categoryTokens, except: Set())
-        store.shield.webDomains = applications.webDomainTokens
+        print("model.setShieldRestrictions()\nwebDonmains = \(selectionToDiscourage.webDomains)")
+        print("Comparison between \(selectionToDiscourage.webDomains.first.debugDescription) and \(WebDomain(domain: "twitter.com"))")
+        print(selectionToDiscourage.webDomains.first == WebDomain(domain: "twitter.com"))
         
-        for customURL in customURLstoBLock {
-            if let token = WebDomain(domain: customURL).token {
-                store.shield.webDomains?.insert(token)
-            }
-        }
+        store.shield.applications = selectionToDiscourage.applicationTokens
+        store.shield.applicationCategories = selectionToDiscourage.categoryTokens.isEmpty ? nil: ShieldSettings.ActivityCategoryPolicy.specific(selectionToDiscourage.categoryTokens)
+        store.shield.webDomainCategories = ShieldSettings.ActivityCategoryPolicy.specific(selectionToDiscourage.categoryTokens, except: Set())
+        store.shield.webDomains = selectionToDiscourage.webDomainTokens.union(Set([WebDomain(domain: "twitter.com")].compactMap({ $0.token
+        })))
+        
+        store.webContent.blockedByFilter = WebContentSettings.FilterPolicy.auto(domainsToBLocks)
+        
+        store.dateAndTime.requireAutomaticDateAndTime = true
     }
     
     func initiateMonitoring() {
@@ -69,11 +84,13 @@ class Model: ObservableObject {
         store.media.denyExplicitContent = true
         store.gameCenter.denyMultiplayerGaming = true
         store.media.denyMusicService = false
-        
     }
     
     func addToBlockList(url: String) {
-        customURLstoBLock.append(url)
+        let domain = WebDomain(domain: url)
+        customDomainsToBlock.append(domain)
+        guard let token = domain.token else { return }
+        store.shield.webDomains?.insert(token)
     }
 }
 

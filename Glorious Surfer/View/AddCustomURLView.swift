@@ -17,12 +17,16 @@ struct AddCustomURLView: View {
     var body: some View {
         Form {
             Section {
-                TextField("Custom URL to block", text: $name)
+                TextField("Custom Domain to block", text: $name)
                     .keyboardType(.URL)
                     .textContentType(.URL)
+                    .textCase(.lowercase)
+                    .textFieldStyle(.roundedBorder)
+                    .textInputAutocapitalization(.never)
+                    .autocorrectionDisabled()
             }
             Section {
-                Button("Submit") {
+                Button("Save") {
                     model.addToBlockList(url: name)
                     dismiss()
                 }

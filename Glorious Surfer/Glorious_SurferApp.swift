@@ -26,6 +26,7 @@ struct Glorious_SurferApp: App {
                         } catch {
                             print("Failed to authorized \(error.localizedDescription)")
                         }
+                        model.initiateMonitoring()
                     }
                 }
         }
