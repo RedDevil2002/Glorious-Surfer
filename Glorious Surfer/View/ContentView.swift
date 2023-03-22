@@ -22,6 +22,8 @@ struct ContentView: View {
     
     @EnvironmentObject var model: Model
     
+    @State private var showAddCustomAdultWebsiteToBlockView = false
+    
     var body: some View {
         TabView {
             CustomBlockListView(model: _model)
@@ -56,25 +58,59 @@ struct ContentView: View {
                 }
                 
                 
-                Toggle(isOn: $isAdultFilterOn) {
-                    Label("Adult", systemImage: "19.circle.fill")
-                        .foregroundColor(.red)
+                VStack {
+                    Toggle(isOn: $isAdultFilterOn) {
+                        Label {
+                            Text("Adult")
+                        } icon: {
+                            Image(systemName: "19.circle.fill")
+                                .foregroundColor(.red)
+                        }
+                    }
+                    .padding(.horizontal)
+                    
+                    if isAdultFilterOn {
+                        List {
+                            Button {
+                                showAddCustomAdultWebsiteToBlockView.toggle()
+                            } label: {
+                                Label("Add a new website to block", systemImage: "plus.circle.fill")
+                            }
+
+                            ForEach(model.customAdultDomainsToBlock, id: \.self) {
+                                Text($0.domain ?? "")
+                            }
+                            .onDelete { indices in
+                                model.customAdultDomainsToBlock.remove(atOffsets: indices)
+                            }
+                        }
+                    }
                 }
-                .padding(.horizontal)
                 
                 Toggle(isOn: $isDrugFilterOn) {
-                    Label("Drug", systemImage: "pills.circle.fill")
-                        .foregroundColor(.green)
+                    Label {
+                        Text("Drug")
+                    } icon: {
+                        Image(systemName: "pills.circle.fill")
+                            .foregroundColor(.green)
+                    }
                 }
                 .padding(.horizontal)
                 
                 Toggle(isOn: $isDatingFilterOn) {
-                    Label("Dating", systemImage: "heart.circle.fill")
-                        .foregroundColor(.red)
+                    Label {
+                        Text("Dating")
+                    } icon: {
+                        Image(systemName: "heart.circle.fill")
+                            .foregroundColor(.red)
+                    }
                 }
                 .padding(.horizontal)
 
             }
+            .sheet(isPresented: $showAddCustomAdultWebsiteToBlockView, content: {
+                AddCustomURLView(model: _model)
+            })
             .tabItem {
                 Label("Set Not Allowed Apps", systemImage: "xmark.shield.fill")
                     .font(.title3)

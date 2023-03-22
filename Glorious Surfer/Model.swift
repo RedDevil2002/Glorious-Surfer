@@ -19,12 +19,12 @@ class Model: ObservableObject {
     // Change this line later! (should have no default custom list.)
     @Published var customDomainsToBlock: [WebDomain] = ["mobile.twitter.com", "twitter.com", "google.com", "netflix.com", "naver.com", "reddit.com"].compactMap { domain in
         WebDomain(domain: domain)
-    } {
-        didSet {
-            print(customDomainsToBlock)
-        }
     }
     
+    @Published var customAdultDomainsToBlock: [WebDomain] = ["nude.com", "tooHot.19.com"].compactMap { domain in
+        WebDomain(domain: domain)
+    }
+        
     init() {
         selectionToEncourage = FamilyActivitySelection()
         selectionToDiscourage = FamilyActivitySelection()
