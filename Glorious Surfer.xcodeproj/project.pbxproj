@@ -11,9 +11,6 @@
 		86381C3F29C91C4B00040BEE /* CustomBlockListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86381C3D29C91C4B00040BEE /* CustomBlockListView.swift */; };
 		864D2D6B29C932E7000F0BD6 /* AddCustomURLView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864D2D6A29C932E7000F0BD6 /* AddCustomURLView.swift */; };
 		864D2D6C29C932E7000F0BD6 /* AddCustomURLView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864D2D6A29C932E7000F0BD6 /* AddCustomURLView.swift */; };
-		864D2D7429C9ECAD000F0BD6 /* blockerList.json in Resources */ = {isa = PBXBuildFile; fileRef = 864D2D7329C9ECAD000F0BD6 /* blockerList.json */; };
-		864D2D7629C9ECAD000F0BD6 /* ContentBlockerRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864D2D7529C9ECAD000F0BD6 /* ContentBlockerRequestHandler.swift */; };
-		864D2D7A29C9ECAE000F0BD6 /* ContentBlocker.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 864D2D7129C9ECAD000F0BD6 /* ContentBlocker.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		86D2CDB429C1631C00290AC1 /* Glorious_SurferApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D2CDB329C1631C00290AC1 /* Glorious_SurferApp.swift */; };
 		86D2CDB629C1631C00290AC1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86D2CDB529C1631C00290AC1 /* ContentView.swift */; };
 		86D2CDB829C1631D00290AC1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86D2CDB729C1631D00290AC1 /* Assets.xcassets */; };
@@ -44,13 +41,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		864D2D7829C9ECAE000F0BD6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 86D2CDA829C1631C00290AC1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 864D2D7029C9ECAD000F0BD6;
-			remoteInfo = ContentBlocker;
-		};
 		86D2CDC229C1631D00290AC1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 86D2CDA829C1631C00290AC1 /* Project object */;
@@ -89,7 +79,6 @@
 			dstSubfolderSpec = 13;
 			files = (
 				86D2CE2A29C24EE700290AC1 /* GloriousCustomShield.appex in Embed Foundation Extensions */,
-				864D2D7A29C9ECAE000F0BD6 /* ContentBlocker.appex in Embed Foundation Extensions */,
 				86D2CDF229C1FF3000290AC1 /* AcitivityMonitor.appex in Embed Foundation Extensions */,
 			);
 			name = "Embed Foundation Extensions";
@@ -100,10 +89,6 @@
 /* Begin PBXFileReference section */
 		86381C3D29C91C4B00040BEE /* CustomBlockListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBlockListView.swift; sourceTree = "<group>"; };
 		864D2D6A29C932E7000F0BD6 /* AddCustomURLView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCustomURLView.swift; sourceTree = "<group>"; };
-		864D2D7129C9ECAD000F0BD6 /* ContentBlocker.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ContentBlocker.appex; sourceTree = BUILT_PRODUCTS_DIR; };
-		864D2D7329C9ECAD000F0BD6 /* blockerList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = blockerList.json; sourceTree = "<group>"; };
-		864D2D7529C9ECAD000F0BD6 /* ContentBlockerRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentBlockerRequestHandler.swift; sourceTree = "<group>"; };
-		864D2D7729C9ECAE000F0BD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		86D2CDB029C1631C00290AC1 /* Glorious Surfer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Glorious Surfer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		86D2CDB329C1631C00290AC1 /* Glorious_SurferApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Glorious_SurferApp.swift; sourceTree = "<group>"; };
 		86D2CDB529C1631C00290AC1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -135,13 +120,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		864D2D6E29C9ECAD000F0BD6 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		86D2CDAD29C1631C00290AC1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -183,16 +161,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		864D2D7229C9ECAD000F0BD6 /* ContentBlocker */ = {
-			isa = PBXGroup;
-			children = (
-				864D2D7329C9ECAD000F0BD6 /* blockerList.json */,
-				864D2D7529C9ECAD000F0BD6 /* ContentBlockerRequestHandler.swift */,
-				864D2D7729C9ECAE000F0BD6 /* Info.plist */,
-			);
-			path = ContentBlocker;
-			sourceTree = "<group>";
-		};
 		864D2D7E29C9FE7B000F0BD6 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -212,7 +180,6 @@
 				86D2CDCE29C1631D00290AC1 /* Glorious SurferUITests */,
 				86D2CDEB29C1FF3000290AC1 /* AcitivityMonitor */,
 				86D2CE2329C24EE700290AC1 /* GloriousCustomShield */,
-				864D2D7229C9ECAD000F0BD6 /* ContentBlocker */,
 				86D2CDE829C1FF3000290AC1 /* Frameworks */,
 				86D2CDB129C1631C00290AC1 /* Products */,
 			);
@@ -226,7 +193,6 @@
 				86D2CDCB29C1631D00290AC1 /* Glorious SurferUITests.xctest */,
 				86D2CDE729C1FF3000290AC1 /* AcitivityMonitor.appex */,
 				86D2CE1E29C24EE700290AC1 /* GloriousCustomShield.appex */,
-				864D2D7129C9ECAD000F0BD6 /* ContentBlocker.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -306,23 +272,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		864D2D7029C9ECAD000F0BD6 /* ContentBlocker */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 864D2D7B29C9ECAE000F0BD6 /* Build configuration list for PBXNativeTarget "ContentBlocker" */;
-			buildPhases = (
-				864D2D6D29C9ECAD000F0BD6 /* Sources */,
-				864D2D6E29C9ECAD000F0BD6 /* Frameworks */,
-				864D2D6F29C9ECAD000F0BD6 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = ContentBlocker;
-			productName = ContentBlocker;
-			productReference = 864D2D7129C9ECAD000F0BD6 /* ContentBlocker.appex */;
-			productType = "com.apple.product-type.app-extension";
-		};
 		86D2CDAF29C1631C00290AC1 /* Glorious Surfer */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 86D2CDD529C1631D00290AC1 /* Build configuration list for PBXNativeTarget "Glorious Surfer" */;
@@ -337,7 +286,6 @@
 			dependencies = (
 				86D2CDF129C1FF3000290AC1 /* PBXTargetDependency */,
 				86D2CE2929C24EE700290AC1 /* PBXTargetDependency */,
-				864D2D7929C9ECAE000F0BD6 /* PBXTargetDependency */,
 			);
 			name = "Glorious Surfer";
 			productName = "Glorious Surfer";
@@ -424,9 +372,6 @@
 				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
-					864D2D7029C9ECAD000F0BD6 = {
-						CreatedOnToolsVersion = 14.2;
-					};
 					86D2CDAF29C1631C00290AC1 = {
 						CreatedOnToolsVersion = 14.2;
 					};
@@ -464,20 +409,11 @@
 				86D2CDCA29C1631D00290AC1 /* Glorious SurferUITests */,
 				86D2CDE629C1FF3000290AC1 /* AcitivityMonitor */,
 				86D2CE1D29C24EE700290AC1 /* GloriousCustomShield */,
-				864D2D7029C9ECAD000F0BD6 /* ContentBlocker */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		864D2D6F29C9ECAD000F0BD6 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				864D2D7429C9ECAD000F0BD6 /* blockerList.json in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		86D2CDAE29C1631C00290AC1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -519,14 +455,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		864D2D6D29C9ECAD000F0BD6 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				864D2D7629C9ECAD000F0BD6 /* ContentBlockerRequestHandler.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		86D2CDAC29C1631C00290AC1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -588,11 +516,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		864D2D7929C9ECAE000F0BD6 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 864D2D7029C9ECAD000F0BD6 /* ContentBlocker */;
-			targetProxy = 864D2D7829C9ECAE000F0BD6 /* PBXContainerItemProxy */;
-		};
 		86D2CDC329C1631D00290AC1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 86D2CDAF29C1631C00290AC1 /* Glorious Surfer */;
@@ -616,63 +539,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		864D2D7C29C9ECAE000F0BD6 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = F6K6BFNLSM;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ContentBlocker/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = ContentBlocker;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.safeSurfer.devil.Glorious-Surfer.ContentBlocker";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		864D2D7D29C9ECAE000F0BD6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = F6K6BFNLSM;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ContentBlocker/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = ContentBlocker;
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.safeSurfer.devil.Glorious-Surfer.ContentBlocker";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 		86D2CDD329C1631D00290AC1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -793,7 +659,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Glorious Surfer/Preview Content\"";
 				DEVELOPMENT_TEAM = F6K6BFNLSM;
-				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_HARDENED_RUNTIME = NO;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -832,7 +698,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Glorious Surfer/Preview Content\"";
 				DEVELOPMENT_TEAM = F6K6BFNLSM;
-				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_HARDENED_RUNTIME = NO;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -1067,15 +933,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		864D2D7B29C9ECAE000F0BD6 /* Build configuration list for PBXNativeTarget "ContentBlocker" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				864D2D7C29C9ECAE000F0BD6 /* Debug */,
-				864D2D7D29C9ECAE000F0BD6 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		86D2CDAB29C1631C00290AC1 /* Build configuration list for PBXProject "Glorious Surfer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
