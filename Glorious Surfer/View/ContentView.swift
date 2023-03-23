@@ -108,6 +108,8 @@ struct ContentView: View {
                     }
                 }
                 .padding(.horizontal)
+                
+                Spacer()
 
             }
             .sheet(isPresented: $showAddCustomAdultWebsiteToBlockView, content: {
