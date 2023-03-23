@@ -11,6 +11,7 @@ import FamilyControls
 struct ContentView: View {
     @State private var showDiscouragedAppsPicker = false
     @State private var showEncouragedAppsPicker = false
+    @State private var showAddCustomAdultWebsiteToBlockView = false
     
     @State private var isAdultFilterOn = false {
         didSet {
@@ -21,8 +22,6 @@ struct ContentView: View {
     @State private var isDrugFilterOn = false
     
     @EnvironmentObject var model: Model
-    
-    @State private var showAddCustomAdultWebsiteToBlockView = false
     
     var body: some View {
         TabView {
@@ -57,6 +56,9 @@ struct ContentView: View {
                     model.setShieldRestrictions()
                 }
                 
+                Button("downtime") {
+                    model.downTime()
+                }
                 
                 VStack {
                     Toggle(isOn: $isAdultFilterOn) {

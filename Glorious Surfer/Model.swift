@@ -39,6 +39,8 @@ class Model: ObservableObject {
     func adultFilterToggled() {
         if store.webContent.blockedByFilter == .auto() {
             store.webContent.blockedByFilter = WebContentSettings.FilterPolicy.none
+            let domainsToBLocks = Set(selectionToDiscourage.webDomains).union(customAdultDomainsToBlock)
+            store.webContent.blockedByFilter = WebContentSettings.FilterPolicy.auto(domainsToBLocks)
         } else {
             store.webContent.blockedByFilter = .auto()
         }
@@ -91,6 +93,23 @@ class Model: ObservableObject {
         customDomainsToBlock.append(domain)
         guard let token = domain.token else { return }
         store.shield.webDomains?.insert(token)
+    }
+    
+    func addToAdultBlockList(url: String) {
+        let domain = WebDomain(domain: url)
+        customAdultDomainsToBlock.append(domain)
+        guard let token = domain.token else { return }
+        store.shield.webDomains?.insert(token)
+    }
+    
+    func downTime() {
+        store.shield.applicationCategories = ShieldSettings.ActivityCategoryPolicy.all()
+    }
+    
+    func contentRestriction() {
+        store.appStore.denyInAppPurchases = true
+        store.appStore.maximumRating = 300 // Blocks 12+
+        store.appStore.requirePasswordForPurchases = true
     }
 }
 

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		86381C3E29C91C4B00040BEE /* CustomBlockListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86381C3D29C91C4B00040BEE /* CustomBlockListView.swift */; };
 		86381C3F29C91C4B00040BEE /* CustomBlockListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86381C3D29C91C4B00040BEE /* CustomBlockListView.swift */; };
+		8638997D29CD1224002AFDAD /* AddCustomAdultURLView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8638997C29CD1224002AFDAD /* AddCustomAdultURLView.swift */; };
 		864D2D6B29C932E7000F0BD6 /* AddCustomURLView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864D2D6A29C932E7000F0BD6 /* AddCustomURLView.swift */; };
 		864D2D6C29C932E7000F0BD6 /* AddCustomURLView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 864D2D6A29C932E7000F0BD6 /* AddCustomURLView.swift */; };
 		864D2D7429C9ECAD000F0BD6 /* blockerList.json in Resources */ = {isa = PBXBuildFile; fileRef = 864D2D7329C9ECAD000F0BD6 /* blockerList.json */; };
@@ -99,6 +100,7 @@
 
 /* Begin PBXFileReference section */
 		86381C3D29C91C4B00040BEE /* CustomBlockListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBlockListView.swift; sourceTree = "<group>"; };
+		8638997C29CD1224002AFDAD /* AddCustomAdultURLView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCustomAdultURLView.swift; sourceTree = "<group>"; };
 		864D2D6A29C932E7000F0BD6 /* AddCustomURLView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCustomURLView.swift; sourceTree = "<group>"; };
 		864D2D7129C9ECAD000F0BD6 /* ContentBlocker.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ContentBlocker.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		864D2D7329C9ECAD000F0BD6 /* blockerList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = blockerList.json; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 				86D2CDB529C1631C00290AC1 /* ContentView.swift */,
 				86381C3D29C91C4B00040BEE /* CustomBlockListView.swift */,
 				864D2D6A29C932E7000F0BD6 /* AddCustomURLView.swift */,
+				8638997C29CD1224002AFDAD /* AddCustomAdultURLView.swift */,
 				86D2CE0029C21C9400290AC1 /* SettingView.swift */,
 			);
 			path = View;
@@ -539,6 +542,7 @@
 				86D2CE0129C21C9400290AC1 /* SettingView.swift in Sources */,
 				86D2CDB429C1631C00290AC1 /* Glorious_SurferApp.swift in Sources */,
 				86D2CDDF29C1F78D00290AC1 /* SetUp.swift in Sources */,
+				8638997D29CD1224002AFDAD /* AddCustomAdultURLView.swift in Sources */,
 				86D2CDE129C1F99A00290AC1 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
